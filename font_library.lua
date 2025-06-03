@@ -1,9 +1,17 @@
 local FontLibrary = {}
 
 local fonts = {}
+local DEBUG_ENABLED = false
 
 local function debugLog(message)
-    print("[FontLibrary Debug]", message)
+    if DEBUG_ENABLED then
+        print("[FontLibrary Debug]", message)
+    end
+end
+
+function FontLibrary.SetDebugMode(enabled)
+    DEBUG_ENABLED = enabled
+    debugLog("Debug mode " .. (enabled and "enabled" or "disabled"))
 end
 
 function FontLibrary.GetScreenSize()
