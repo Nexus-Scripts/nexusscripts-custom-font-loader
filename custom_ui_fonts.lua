@@ -64,12 +64,36 @@ function CustomUIFonts.InitializeDefaultFonts()
         Id = "leadcoat.ttf", 
         Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/leadcoat.ttf")
     })
+
+    local MinecraftiaRegular = CustomUIFonts.Register_Font("MinecraftiaRegular", 200, "Normal", {
+        Id = "Minecraftia-Regular.ttf", 
+        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/Minecraftia-Regular.ttf")
+    })
+
+    local ProggyTiny = CustomUIFonts.Register_Font("ProggyTiny", 200, "Normal", {
+        Id = "ProggyTiny.ttf", 
+        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/ProggyTiny.ttf")
+    })
+
+    local fstahoma8px = CustomUIFonts.Register_Font("fstahoma8px", 200, "Normal", {
+        Id = "fs-tahoma-8px.ttf", 
+        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/fs-tahoma-8px.ttf")
+    })
+
+    local smallest_pixel = CustomUIFonts.Register_Font("smallest_pixel", 200, "Normal", {
+        Id = "smallest_pixel-7.ttf", 
+        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/smallest_pixel-7.ttf")
+    })
     
     debugLog("Creating Font objects...")
     fonts = {
         ["TahomaBold"] = Font.new(tahomaBold, Enum.FontWeight.Regular, Enum.FontStyle.Normal),
         ["ProggyClean"] = Font.new(proggyClean, Enum.FontWeight.Regular, Enum.FontStyle.Normal),
-        ["leadcoat"] = Font.new(leadcoat, Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+        ["leadcoat"] = Font.new(leadcoat, Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        ["MinecraftiaRegular"] = Font.new(MinecraftiaRegular, Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        ["ProggyTiny"] = Font.new(ProggyTiny, Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        ["fstahoma8px"] = Font.new(fstahoma8px, Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        ["smallest_pixel"] = Font.new(smallest_pixel, Enum.FontWeight.Regular, Enum.FontStyle.Normal)
     }
     
     debugLog("Font initialization complete")

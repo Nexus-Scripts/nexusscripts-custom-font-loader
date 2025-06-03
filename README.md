@@ -74,9 +74,13 @@ end
 
 ## 🔧 Default Fonts
 
-- **ProggyClean** - Clean, modern programming font
-- **TahomaBold** - Bold variant of the classic Tahoma
-- **Leadcoat** - Stylish display font
+- **ProggyClean** - Clean, modern programming font perfect for code displays
+- **TahomaBold** - Bold variant of the classic Tahoma, ideal for headers
+- **Leadcoat** - Stylish display font with unique character
+- **MinecraftiaRegular** - Pixel-perfect font inspired by retro gaming
+- **ProggyTiny** - Compact variant of Proggy font, ideal for small text
+- **FSTahoma8px** - 8-pixel variant of Tahoma, perfect for compact UI elements
+- **Smallest Pixel-7** - Ultra-compact pixel font for minimal space requirements
 
 ## 🤝 Contributing
 

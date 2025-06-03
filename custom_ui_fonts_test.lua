@@ -39,38 +39,33 @@ local function TestFonts()
     local player = Players.LocalPlayer
     local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
     local frame = Instance.new("Frame", gui)
-    frame.Size = UDim2.new(0, 600, 0, 300)
-    frame.Position = UDim2.new(0.5, -300, 0.5, -150)
+    frame.Size = UDim2.new(0, 800, 0, 700)
+    frame.Position = UDim2.new(0.5, -400, 0.5, -350)
     frame.BackgroundTransparency = 1
+
+    local fontConfigs = {
+        {name = "ProggyClean", color = Color3.new(0.521568, 1, 0.262745)},
+        {name = "TahomaBold", color = Color3.new(1, 0.8, 0.2)},
+        {name = "leadcoat", color = Color3.new(0.4, 0.6, 1)},
+        {name = "MinecraftiaRegular", color = Color3.new(1, 0.4, 0.4)},
+        {name = "ProggyTiny", color = Color3.new(0.8, 0.4, 1)},
+        {name = "fstahoma8px", color = Color3.new(0.4, 1, 0.8)},
+        {name = "smallest_pixel", color = Color3.new(1, 0.6, 0.2)}
+    }
+
+    for i, config in ipairs(fontConfigs) do
+        local txt = Instance.new("TextLabel", frame)
+        txt.Size = UDim2.new(1, 0, 0.14, 0)
+        txt.Position = UDim2.new(0, 0, 0.14 * (i-1), 0)
+        txt.BackgroundTransparency = 0.9
+        txt.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
+        txt.Text = string.format("ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 (%s)", config.name)
+        txt.TextScaled = true
+        txt.FontFace = CustomUIFonts.GetFont(config.name)
+        txt.TextColor3 = config.color
+    end
     
-    local txt1 = Instance.new("TextLabel", frame)
-    txt1.Size = UDim2.new(1, 0, 0.33, 0)
-    txt1.Position = UDim2.new(0, 0, 0, 0)
-    txt1.BackgroundTransparency = 1
-    txt1.Text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ (ProggyClean)"
-    txt1.TextScaled = true
-    txt1.FontFace = CustomUIFonts.GetFont("ProggyClean")
-    txt1.TextColor3 = Color3.new(0.521568, 1, 0.262745)
-    
-    local txt2 = Instance.new("TextLabel", frame)
-    txt2.Size = UDim2.new(1, 0, 0.33, 0)
-    txt2.Position = UDim2.new(0, 0, 0.33, 0)
-    txt2.BackgroundTransparency = 1
-    txt2.Text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ (TahomaBold)"
-    txt2.TextScaled = true
-    txt2.FontFace = CustomUIFonts.GetFont("TahomaBold")
-    txt2.TextColor3 = Color3.new(1, 0.8, 0.2)
-    
-    local txt3 = Instance.new("TextLabel", frame)
-    txt3.Size = UDim2.new(1, 0, 0.33, 0)
-    txt3.Position = UDim2.new(0, 0, 0.66, 0)
-    txt3.BackgroundTransparency = 1
-    txt3.Text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ (Leadcoat)"
-    txt3.TextScaled = true
-    txt3.FontFace = CustomUIFonts.GetFont("leadcoat")
-    txt3.TextColor3 = Color3.new(0.4, 0.6, 1)
-    
-    wait(5)
+    wait(10)
     frame:Destroy()
 end
 
