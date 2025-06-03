@@ -40,12 +40,12 @@ local function TestFonts()
     end
     
     print("[FontTest] Creating test labels...")
-    local tahomaBoldFrame = FontLibrary.CreateTestLabel("TahomaBold", -150)  -- Above center
-    local proggyCleanFrame = FontLibrary.CreateTestLabel("ProggyClean", 150)  -- Below center
+    local tahomaBoldFrame = FontLibrary.CreateTestLabel("TahomaBold", -150)
+    local proggyCleanFrame = FontLibrary.CreateTestLabel("ProggyClean", 150)
     
-    --wait(5)
-    --tahomaBoldFrame:Destroy()
-    --:Destroy()
+    wait(5)
+    tahomaBoldFrame:Destroy()
+    proggyCleanFrame:Destroy()
     
     print("[FontTest] Test complete!")
 end
@@ -54,4 +54,4 @@ print("[FontTest] Starting font test...")
 local success, err = pcall(TestFonts)
 if not success then
     print("[FontTest] Test failed:", err)
-end 
+end
