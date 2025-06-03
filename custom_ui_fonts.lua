@@ -50,8 +50,8 @@ end
 function CustomUIFonts.InitializeDefaultFonts()
     debugLog("Initializing default fonts...")
     
-    local proggyTiny = CustomUIFonts.Register_Font("ProggyTiny", 200, "Normal", {
-        Id = "ProggyTiny.ttf",
+    local tahomaBold = CustomUIFonts.Register_Font("TahomaBold", 200, "Normal", {
+        Id = "TahomaBold.ttf",
         Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/tahoma_bold.ttf")
     })
     
@@ -67,7 +67,7 @@ function CustomUIFonts.InitializeDefaultFonts()
     
     debugLog("Creating Font objects...")
     fonts = {
-        ["TahomaBold"] = Font.new(proggyTiny, Enum.FontWeight.Regular, Enum.FontStyle.Normal),
+        ["TahomaBold"] = Font.new(tahomaBold, Enum.FontWeight.Regular, Enum.FontStyle.Normal),
         ["ProggyClean"] = Font.new(proggyClean, Enum.FontWeight.Regular, Enum.FontStyle.Normal),
         ["leadcoat"] = Font.new(leadcoat, Enum.FontWeight.Regular, Enum.FontStyle.Normal)
     }
