@@ -52,12 +52,12 @@ function CustomUIFonts.InitializeDefaultFonts()
     
     local proggyTiny = CustomUIFonts.Register_Font("ProggyTiny", 200, "Normal", {
         Id = "ProggyTiny.ttf",
-        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-custom-font-loader/raw/main/fonts/tahoma_bold.ttf")
+        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/tahoma_bold.ttf")
     })
     
     local proggyClean = CustomUIFonts.Register_Font("ProggyClean", 200, "Normal", {
         Id = "ProggyClean.ttf", 
-        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-custom-font-loader/raw/main/fonts/ProggyClean.ttf")
+        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/ProggyClean.ttf")
     })
     
     debugLog("Creating Font objects...")
