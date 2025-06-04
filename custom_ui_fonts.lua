@@ -17,8 +17,9 @@ function CustomUIFonts.Register_Font(Name, Weight, Style, Asset)
     debugLog("Attempting to register font: " .. Name)
     
     if not isfile(Asset.Id) then
-        debugLog("Font file doesn't exist, creating: " .. Asset.Id)
-        writefile(Asset.Id, Asset.Font)
+        debugLog("Font file doesn't exist, downloading and creating: " .. Asset.Id)
+        local fontData = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/" .. Asset.Id)
+        writefile(Asset.Id, fontData)
     else
         debugLog("Font file already exists: " .. Asset.Id)
     end
@@ -51,38 +52,31 @@ function CustomUIFonts.InitializeDefaultFonts()
     debugLog("Initializing default fonts...")
     
     local tahomaBold = CustomUIFonts.Register_Font("TahomaBold", 200, "Normal", {
-        Id = "TahomaBold.ttf",
-        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/tahoma_bold.ttf")
+        Id = "tahoma_bold.ttf"
     })
     
     local proggyClean = CustomUIFonts.Register_Font("ProggyClean", 200, "Normal", {
-        Id = "ProggyClean.ttf", 
-        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/ProggyClean.ttf")
+        Id = "ProggyClean.ttf"
     })
 
     local leadcoat = CustomUIFonts.Register_Font("leadcoat", 200, "Normal", {
-        Id = "leadcoat.ttf", 
-        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/leadcoat.ttf")
+        Id = "leadcoat.ttf"
     })
 
     local MinecraftiaRegular = CustomUIFonts.Register_Font("MinecraftiaRegular", 200, "Normal", {
-        Id = "Minecraftia-Regular.ttf", 
-        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/Minecraftia-Regular.ttf")
+        Id = "Minecraftia-Regular.ttf"
     })
 
     local ProggyTiny = CustomUIFonts.Register_Font("ProggyTiny", 200, "Normal", {
-        Id = "ProggyTiny.ttf", 
-        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/ProggyTiny.ttf")
+        Id = "ProggyTiny.ttf"
     })
 
     local fstahoma8px = CustomUIFonts.Register_Font("fstahoma8px", 200, "Normal", {
-        Id = "fs-tahoma-8px.ttf", 
-        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/fs-tahoma-8px.ttf")
+        Id = "fs-tahoma-8px.ttf"
     })
 
     local smallest_pixel = CustomUIFonts.Register_Font("smallest_pixel", 200, "Normal", {
-        Id = "smallest_pixel-7.ttf", 
-        Font = game:HttpGet("https://github.com/Nexus-Scripts/nexusscripts-roblox-ui-custom-font-loader/raw/main/fonts/smallest_pixel-7.ttf")
+        Id = "smallest_pixel-7.ttf"
     })
     
     debugLog("Creating Font objects...")
